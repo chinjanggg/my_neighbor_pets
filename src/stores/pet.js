@@ -13,6 +13,9 @@ export const usePetStore = defineStore( 'pet', {
         },
 
         loadPetList() {
+            // reset pet list
+            this.petList = []
+
             const imageList = this.loadImageList()
             const dataList = [
                 {
