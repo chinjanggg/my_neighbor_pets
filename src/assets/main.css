@@ -2,6 +2,7 @@
 
 #app {
     margin: 0 auto;
+    text-align: center;
 }
 
 a,
@@ -17,10 +18,10 @@ a,
         background-color: hsla(160, 100%, 37%, 0.2);
     }
 }
-
+/* 
 @media (min-width: 1024px) {
     body {
         display: flex;
         place-items: center;
     }
-}
+} */

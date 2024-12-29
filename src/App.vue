@@ -1,7 +1,11 @@
 <template>
-    <appbar />
+    <v-layout>
+        <appbar />
 
-    <RouterView />
+        <v-main>
+            <RouterView />
+        </v-main>
+    </v-layout>
 </template>
 
 <script setup>
