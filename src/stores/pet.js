@@ -17,34 +17,28 @@ export const usePetStore = defineStore( 'pet', {
             const dataList = [
                 {
                     id: 1,
-                    defaultImg: '@/assets/animal-shelter.png',
-                    name: 'a',
+                    name: 'bobby',
 
                 },
                 {
                     id: 2,
-                    defaultImg: '@/assets/animal-shelter.png',
-                    name: 'b',
+                    name: 'charlie',
                 },
                 {
                     id: 3,
-                    defaultImg: '@/assets/animal-shelter.png',
-                    name: 'c',
+                    name: 'kaitoon',
                 },
                 {
                     id: 4,
-                    defaultImg: '@/assets/animal-shelter.png',
-                    name: 'd',
+                    name: 'manow',
                 },
                 {
                     id: 5,
-                    defaultImg: '@/assets/animal-shelter.png',
-                    name: 'e',
+                    name: 'meow',
                 },
                 {
                     id: 6,
-                    defaultImg: '@/assets/animal-shelter.png',
-                    name: 'f',
+                    name: 'maew',
                 }
             ]
 
@@ -67,17 +61,45 @@ export const usePetStore = defineStore( 'pet', {
             const dataList = [
                 {
                     id: 1,
-                    filename: 'test',
-                    fileExtension: 'png',
+                    filename: 'cat/alexandr-popadin-j-k1FEpdlqw-unsplash.jpg',
                     isDefaultImage: true,
                     petId: 1
-                }
+                },
+                {
+                    id: 2,
+                    filename: 'cat/andrew-umansky-l5truYNKmm8-unsplash.jpg',
+                    isDefaultImage: true,
+                    petId: 2
+                },
+                {
+                    id: 3,
+                    filename: 'cat/artur-kornakov-LP5tjtG8I68-unsplash.jpg',
+                    isDefaultImage: true,
+                    petId: 3
+                },
+                {
+                    id: 4,
+                    filename: 'cat/chris-tweten-ff5zmpoTLgs-unsplash.jpg',
+                    isDefaultImage: true,
+                    petId: 4
+                },
+                {
+                    id: 5,
+                    filename: 'cat/cyrus-chew-Dl39g6QhOIM-unsplash.jpg',
+                    isDefaultImage: true,
+                    petId: 5
+                },
+                {
+                    id: 6,
+                    filename: 'cat/elliotm-Pp6shZRYoh4-unsplash.jpg',
+                    isDefaultImage: true,
+                    petId: 6
+                },
             ]
             for( const data of dataList ) {
                 const image = new Image(
                     data.id,
                     data.filename,
-                    data.fileExtension,
                     data.isDefaultImage,
                     data.petId
                 )

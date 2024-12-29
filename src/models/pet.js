@@ -18,19 +18,18 @@ export default class Pet {
         this.color = color
     }
 
-    setDefaultImage( defaultImage ) {
-        this.defaultImage = defaultImage
-    }
-
     setImageList( imageList ) {
         self.imageList = imageList
 
+        this.setDefaultImage()
+    }
+
+    setDefaultImage() {
         let defaultImage = self.imageList.find( image => image.isDefaultImage )
-        if ( defaultImage === null ) {
+        if ( defaultImage === undefined ) {
             defaultImage = new Image(
                 1,
-                '@/assets/animal-shelter',
-                'png',
+                'animal-shelter.png',
                 true,
                 this.id
             )
