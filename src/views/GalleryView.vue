@@ -23,8 +23,7 @@
         <v-container>
             <v-row v-for="rowNum in numRows" v-bind:key="rowNum">
                 <v-col v-for="colNum in numItemPerRow" v-bind:key="dataList[( ( rowNum - 1 ) * numItemPerRow) + colNum - 1].id">
-                    <img src="@/assets/animal-shelter.png" class="petImg">
-                    {{ dataList[( ( rowNum - 1 ) * numItemPerRow) + colNum - 1].name  }}
+                    <pet-card-item :pet="dataList[( ( rowNum - 1 ) * numItemPerRow) + colNum - 1]" />
                 </v-col>
 
             </v-row>
@@ -36,6 +35,7 @@
 
 import { computed, ref } from 'vue'
 import { usePetStore } from '@/stores/pet'
+import PetCardItem from '@/components/PetCardItem.vue'
 
 const petStore = usePetStore()
 
@@ -51,13 +51,13 @@ const sortList = ref([
     'color'
 ])
 
-const group = 'house'
-const sort = 'house'
+const group = ref('house')
+const sort = ref('name')
 
 const numItemPerRow = ref(3)
 
 petStore.loadPetList()
-const dataList = ref(petStore.petList)
+const dataList = ref(petStore.petList.sort( ( a, b ) => a[sort.value].toLocaleLowerCase().localeCompare(b[sort.value].toLocaleLowerCase())))
 
 const numRows = computed(() => Math.ceil( dataList.value.length / numItemPerRow.value ) )
 
