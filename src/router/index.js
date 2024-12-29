@@ -15,6 +15,16 @@ const router = createRouter({
             component: () => import('@/views/AuthorizeView.vue'),
         },
         {
+            path: '/gallery',
+            name: 'gallery',
+            component: () => import('@/views/GalleryView.vue'),
+        },
+        {
+            path: '/lostnfound',
+            name: 'lostnfound',
+            component: () => import('@/views/LostAndFoundView.vue'),
+        },
+        {
             path: '/about',
             name: 'about',
             // route level code-splitting

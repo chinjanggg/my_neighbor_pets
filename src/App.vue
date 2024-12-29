@@ -5,6 +5,8 @@
                 <RouterLink to="/">Home</RouterLink>
                 <RouterLink to="/about">About</RouterLink>
                 <RouterLink to="/authorize">Authorize</RouterLink>
+                <RouterLink to="/gallery">Gallery</RouterLink>
+                <RouterLink to="/lostnfound">Lost And Found</RouterLink>
             </nav>
         </div>
     </header>
