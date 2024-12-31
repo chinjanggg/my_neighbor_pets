@@ -9,5 +9,5 @@
 </template>
 
 <script setup>
-import AppBar from '@/components/Appbar.vue'
+import AppBar from '@/components/AppBar.vue'
 </script>
