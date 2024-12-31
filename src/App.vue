@@ -1,6 +1,6 @@
 <template>
     <v-layout>
-        <appbar />
+        <app-bar />
 
         <v-main>
             <RouterView />
@@ -9,5 +9,5 @@
 </template>
 
 <script setup>
-import Appbar from '@/components/Appbar.vue'
+import AppBar from '@/components/Appbar.vue'
 </script>
